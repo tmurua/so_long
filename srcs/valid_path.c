@@ -6,7 +6,7 @@
 /*   By: tmurua <tmurua@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 14:51:17 by tmurua            #+#    #+#             */
-/*   Updated: 2024/02/15 14:51:37 by tmurua           ###   ########.fr       */
+/*   Updated: 2024/02/16 12:35:36 by tmurua           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	**copy_map(char **map)
 		return (NULL);
 	while (map[col])
 	{
-		map_copy[col] = strdup(map[col]);
+		map_copy[col] = ft_strdup(map[col]);
 		col++;
 	}
 	map_copy[col] = NULL;

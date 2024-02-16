@@ -1,4 +1,6 @@
-CC = gcc -Wall -Wextra -Werror -I.
+CC = cc
+
+CFLAGS = -Wall -Wextra -Werror -I.
 
 NAME = libftprintf.a
 
@@ -8,7 +10,7 @@ OBJS = $(SRCS:.c=.o)
 
 
 $(NAME): $(OBJS)
-	CC $(SRCS) -c
+	$(CC) $(CFLAGS) -c $(SRCS)
 	ar rcs $(NAME) $(OBJS)
 #  r = replace c = create s = function index
 

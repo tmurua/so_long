@@ -25,7 +25,7 @@ all : $(NAME)
 $(NAME) : $(OBJS)
 	make -C libft/ all
 	make -C ft_printf/ all
-	$(CC)  $(CFLAGS) $^ -L./libft  -lft -L./ft_printf -lftprintf -lmlx -framework OpenGL -framework AppKit -o $@
+	$(CC) $(CFLAGS) $^ -L./libft -lft -L./ft_printf -lftprintf -lmlx -L/usr/lib -lXext -lX11 -o $@
 	@printf "\t\t\t\t\t$(_RUN)\n"
 
 clean:

@@ -6,7 +6,7 @@
 /*   By: tmurua <tmurua@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 14:36:39 by tmurua            #+#    #+#             */
-/*   Updated: 2024/02/15 14:39:37 by tmurua           ###   ########.fr       */
+/*   Updated: 2024/02/16 12:38:12 by tmurua           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,10 @@ int	ft_printf(const char *str, ...)
 			c += check(ptr, str[i]);
 		}
 		else
+		{
 			c += ft_putchar(str[i]);
 			i++;
+		}
 	}
 	va_end(ptr);
 	return (c);
